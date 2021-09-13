@@ -1,13 +1,101 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  margin: 0 15% 0 15%;
+  padding: 10px;
+}
+
+.nav-bar {
+  background-color: #000000;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #ffffff;
+}
+
+.header-title {
+  line-height: 100px;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 20px;
+  row-gap: 40px;
+  margin-top: 100px;
+}
+
+.article:hover {
+  box-shadow: 5px 10px 18px grey;
+  cursor: pointer;
+}
+
+.title {
+  text-align: left;
+  font-weight: 700;
+  padding: 10px 10px 0 10px;
+}
+
+.abstract {
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 10px 0 10px;
+}
+
+.author {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 14px;
+  padding: 0 10px 0 10px;
+}
+
+.source {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 0 10px 10px 10px;
+}
+
+@media only screen and (max-width: 425px) {
+  .container {
+    margin: 0 5px 0 5px;
+  }
+
+  .content-grid {
+    grid-template-columns: auto;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .container {
+    margin: 0 10% 0 10%;
+  }
+
+  .content-grid {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    margin: 0 5px 0 5px;
+  }
+
+  .content-grid {
+    grid-template-columns: auto auto auto;
+  }
 }
