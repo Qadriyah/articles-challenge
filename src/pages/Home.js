@@ -14,7 +14,7 @@ class Home extends Component {
 
   componentDidMount() {
     const { getArticles } = this.props;
-    getArticles(30);
+    getArticles(7);
   }
 
   onArticleClicked = ({ url }) => {
@@ -27,18 +27,28 @@ class Home extends Component {
     return (
       <div>
         {loading ? (
-          <Loader />
+          <Loader data-test="loader" />
         ) : (
-          <div className="content-grid">
-            {articles
-              ? articles.map((article) => (
-                  <Article
-                    key={article.id}
-                    {...article}
-                    onArticleClicked={this.onArticleClicked}
-                  />
-                ))
-              : null}
+          <div
+            className={
+              articles && articles.length === 0
+                ? "content-grid--empty"
+                : "content-grid"
+            }
+            data-test="content-grid"
+          >
+            {articles && articles.length > 0 ? (
+              articles.map((article, index) => (
+                <Article
+                  data-test={`article-item-${index}`}
+                  key={article.id}
+                  {...article}
+                  onArticleClicked={this.onArticleClicked}
+                />
+              ))
+            ) : (
+              <div data-test="content-grid-empty">No articles were found</div>
+            )}
           </div>
         )}
       </div>

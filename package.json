@@ -21,6 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "yarn run test -- --coverage --ci --testResultsProcessor=\"jest-junit\" --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,5 +41,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "jest": "26.6.0",
+    "jest-enzyme": "^7.1.2",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-junit": "^12.2.0",
+    "redux-mock-store": "^1.5.4",
+    "sinon": "^11.1.2"
   }
 }

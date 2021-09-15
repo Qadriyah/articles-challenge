@@ -16,7 +16,11 @@ const Article = ({
     media && media.length > 0 ? media[0]["media-metadata"][1].url : null;
 
   return (
-    <div className="article" onClick={() => onArticleClicked({ url })}>
+    <div
+      className="article"
+      onClick={() => onArticleClicked({ url })}
+      data-test="article"
+    >
       <div
         style={{
           flex: 1,
@@ -27,7 +31,9 @@ const Article = ({
           backgroundSize: `${imgUrl ? "cover" : "100px"}`,
         }}
       />
-      <div className="title">{title}</div>
+      <div className="title" data-test="title">
+        {title}
+      </div>
       <div className="abstract">{abstract}</div>
       <div className="author">{byline}</div>
       <div className="source">

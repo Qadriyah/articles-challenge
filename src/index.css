@@ -38,6 +38,17 @@ h1 {
   margin-top: 100px;
 }
 
+.content-grid--empty {
+  display: grid;
+  grid-template-columns: auto;
+  column-gap: 20px;
+  row-gap: 40px;
+  margin-top: 100px;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
 .article:hover {
   box-shadow: 5px 10px 18px grey;
   cursor: pointer;
@@ -82,7 +93,7 @@ h1 {
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .container {
-    margin: 0 10% 0 10%;
+    margin: 0 5% 0 5%;
   }
 
   .content-grid {

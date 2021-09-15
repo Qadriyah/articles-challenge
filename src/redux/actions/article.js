@@ -3,8 +3,8 @@ import * as types from "../constants/article";
 /**
  * For best practices, these can be loaded from a .env file
  */
-const baseUrl = "http://api.nytimes.com/svc/mostpopular/v2/viewed";
-const apiKey = "9meWgRdnGio5LWW3ujlgCpyuGn8nJT3x";
+export const baseUrl = "http://api.nytimes.com/svc/mostpopular/v2/viewed";
+export const apiKey = "9meWgRdnGio5LWW3ujlgCpyuGn8nJT3x";
 
 const getArticlesRequest = (promise) => {
   return {
