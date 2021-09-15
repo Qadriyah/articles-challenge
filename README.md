@@ -7,7 +7,7 @@ A web app that consumes the NY Times Most Popular Articles API and show a list o
 - [Dependencies](#dependencies)
 - [Prerequisites](#prerequisites)
 - [To install dependencies run](#to-install-the-dependencies-run)
-- [To irun tests](#to-run-the-tests)
+- [To run tests](#to-run-the-tests)
 - [To generate the test report](#to-generate-the-test-report)
 - [Starting the application](#starting-the-application)
 
@@ -31,7 +31,7 @@ Then change to the project directory:
 cd articles-challenge
 ```
 
-#### To install the dependencies run:
+## To install the dependencies run:
 
 ```
 yarn install or npm install
@@ -39,19 +39,19 @@ yarn install or npm install
 
 This will install all the dependencies defined in the `package.json` file inside the project root directory.
 
-### To run the tests:
+## To run the tests:
 
 ```
 yarn run test
 ```
 
-### To generate the test report:
+## To generate the test report:
 
 ```
 yarn run test:ci
 ```
 
-### Starting the application
+## Starting the application
 
 ```
 yarn start
